@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>
+    Welcome to MyWorld
+  </h1>
+  <button (click)="getAllStudents()"> </button>
+  <h2> Click to fetch details bro</h2>
+</div>
+<div *ngIf="myresponse">
+
+  <table>
+    <tr>
+      <th>Employee</th>
+      <th>Name</th>
+      <th>Dept</th>
+    </tr>
+  <tbody>
+  <tr *ngFor="let student of myresponse">
+    <td>{{student.id}}</td>
+    <td>{{student.name}}</td>
+    <td>{{student.dept}}</td>
+  </tr>
+  </tbody>
+  </table>
+</div>
